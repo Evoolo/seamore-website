@@ -4,7 +4,7 @@
   "animal": "Sharks, rays & dolphins",
   "place": "Pico, Azores",
   "image": "/seamore/media/manta-rays.jpg",
-  "alt": "Mobula rays and a diver in the blue water of the Azores",
+  "alt": "Ray gliding beneath the sunlit surface in the Azores",
   "intro": "An open-ocean journey shaped by the life moving through the Azores.",
   "description": "The archived Azores itinerary centered on mako and blue sharks, mobula rays, and dolphins around Pico. The experience asks for a willingness to follow the day's conditions and remain curious about what appears.",
   "details": [
@@ -15,11 +15,11 @@
   "gallery": [
     {
       "src": "/seamore/media/manta-rays.jpg",
-      "alt": "Mobula rays swimming near a diver"
+      "alt": "Ray gliding beneath the surface"
     },
     {
       "src": "/seamore/media/blue-shark.jpg",
-      "alt": "Blue shark below the surface"
+      "alt": "Sharks silhouetted against the sunlit surface"
     }
   ]
 }

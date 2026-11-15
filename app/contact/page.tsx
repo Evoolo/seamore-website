@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { Arrow } from "@/components/arrow";
 import { PageHero } from "@/components/page-hero";
 import { ContactForm } from "@/components/contact-form";
+import { Words } from "@/components/words";
 import { readPage } from "@/lib/content";
 
 type ContactContent = {
@@ -14,9 +15,23 @@ export const metadata: Metadata = { title: "Contact", description: "Talk with Se
 
 export default function ContactPage() {
   const content = readPage<ContactContent>("contact");
-  return <main>
+  return <main id="main">
     <PageHero eyebrow={content.hero.eyebrow} title={content.hero.title} description={content.hero.description} image={content.hero.image} alt={content.hero.imageAlt} compact />
-    <section className="bg-[#f7f9f8] py-24 md:py-32"><div className="mx-auto grid max-w-[1600px] gap-16 px-6 md:px-12 lg:grid-cols-[.9fr_1.1fr] lg:px-20"><div><p className="eyebrow mb-6 text-[#b52337]">{content.contact.eyebrow}</p><h2 className="font-display max-w-3xl text-[clamp(4rem,7vw,7.5rem)] leading-[.9] tracking-[-.055em]">{content.contact.heading}</h2><p className="mt-10 max-w-xl text-lg leading-[1.7] text-[#526a78]">{content.contact.body}</p><a href={`mailto:${content.contact.email}?subject=Sea%20More%20journey%20inquiry`} className="mt-10 inline-flex items-center gap-3 border-b-2 border-[#b52337] pb-2 text-lg font-semibold transition hover:text-[#b52337] sm:text-2xl"><Mail className="size-5" /> {content.contact.email} <ArrowUpRight className="size-5" /></a></div><ContactForm recipient={content.contact.email} /></div></section>
-    <section className="bg-[#d9eef4] py-20"><div className="mx-auto max-w-[1600px] px-6 md:px-12 lg:px-20"><p className="eyebrow mb-9 text-[#0c4d78]">{content.prompts.eyebrow}</p><ol className="grid gap-8 md:grid-cols-3">{content.prompts.items.map((item, index) => <li key={item.title} className="border-t border-[#8db1c1] pt-5"><span className="eyebrow text-[#0c4d78]">0{index + 1}</span><h3 className="font-display mt-3 text-3xl">{item.title}</h3><p className="mt-2 max-w-sm text-sm leading-relaxed text-[#526a78]">{item.body}</p></li>)}</ol><p className="mt-12 text-xs leading-relaxed text-[#526a78]">{content.prompts.note}</p></div></section>
+    <section className="section bg-[#f7f9f8]"><div className="shell grid gap-16 lg:grid-cols-12 lg:gap-10">
+      <div className="lg:col-span-5">
+        <p data-reveal="up" className="eyebrow eyebrow-rule mb-6 text-[#b52337]">{content.contact.eyebrow}</p>
+        <h2 data-reveal="words" className="h-lg max-w-xl"><Words text={content.contact.heading} /></h2>
+        <div data-reveal="up" style={{ "--d": "150ms" } as React.CSSProperties}>
+          <p className="lede mt-9 max-w-md text-[#526a78]">{content.contact.body}</p>
+          <a href={`mailto:${content.contact.email}?subject=Sea%20More%20journey%20inquiry`} className="text-link mt-10 !text-base !normal-case !tracking-normal sm:!text-xl"><span>{content.contact.email}</span><Arrow /></a>
+        </div>
+      </div>
+      <div className="lg:col-span-6 lg:col-start-7"><ContactForm recipient={content.contact.email} /></div>
+    </div></section>
+    <section className="section bg-[#d9eef4]"><div className="shell">
+      <p data-reveal="up" className="eyebrow eyebrow-rule mb-10 text-[#0c4d78]">{content.prompts.eyebrow}</p>
+      <ol data-reveal="stagger" className="grid gap-10 md:grid-cols-3 md:gap-8">{content.prompts.items.map((item, index) => <li key={item.title} className="border-t border-[#8db1c1] pt-6"><span className="eyebrow tabular text-[#0c4d78]">0{index + 1}</span><h3 className="h-md mt-5">{item.title}</h3><p className="mt-3 max-w-sm text-sm leading-relaxed text-[#526a78]">{item.body}</p></li>)}</ol>
+      <p className="mt-14 max-w-2xl text-xs leading-relaxed text-[#526a78]">{content.prompts.note}</p>
+    </div></section>
   </main>;
 }

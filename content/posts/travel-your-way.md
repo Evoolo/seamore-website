@@ -4,7 +4,7 @@ category: "Travel styles"
 title: "One purpose. Different ways to travel."
 excerpt: "Finding the right format for a wildlife-led journey."
 image: "/seamore/media/manta-rays.jpg"
-alt: "Diver swimming near rays in open blue water"
+alt: "Ray gliding beneath the sunlit surface"
 readTime: "3 min read"
 ---
 

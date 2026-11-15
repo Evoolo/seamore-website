@@ -1,16 +1,19 @@
-// Adapted from @shadcnblocks/faq1 for Sea More Expeditions.
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Words, wordCount } from "@/components/words";
 import { faqItems, readPage } from "@/lib/content";
 
 export function Faq1() {
   const content = readPage<{ eyebrow: string; headingLine1: string; headingLine2: string }>("faq");
-  return <section className="bg-white py-24 md:py-32">
-    <div className="mx-auto grid max-w-[1600px] gap-12 px-6 md:px-12 lg:grid-cols-[.75fr_1.25fr] lg:gap-20 lg:px-20">
-      <div><p className="eyebrow mb-5 text-[#b52337]">{content.eyebrow}</p><h2 className="font-display text-[clamp(3.8rem,6vw,6.5rem)] leading-[.9] tracking-[-.055em]">{content.headingLine1}<br />{content.headingLine2}</h2></div>
-      <Accordion type="single" collapsible className="border-t border-[#9fb6c0]">
-        {faqItems.map((item, index) => <AccordionItem key={`${index}-${item.question}`} value={`faq-${index}`} className="border-[#9fb6c0] py-2">
-          <AccordionTrigger className="font-display py-5 text-left text-2xl leading-tight hover:no-underline md:text-3xl">{item.question}</AccordionTrigger>
-          <AccordionContent className="max-w-2xl pb-6 text-base leading-relaxed text-[#526a78]">{item.answer}</AccordionContent>
+  return <section className="section bg-white">
+    <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-10">
+      <div className="lg:col-span-5">
+        <p data-reveal="up" className="eyebrow eyebrow-rule mb-6 text-[#b52337]">{content.eyebrow}</p>
+        <h2 data-reveal="words" className="h-lg lg:sticky lg:top-28"><Words text={content.headingLine1} /><br /><Words text={content.headingLine2} start={wordCount(content.headingLine1)} /></h2>
+      </div>
+      <Accordion type="single" collapsible data-reveal="stagger" className="border-b border-[#b7cbd2] lg:col-span-7">
+        {faqItems.map((item, index) => <AccordionItem key={`${index}-${item.question}`} value={`faq-${index}`} className="border-b-0 border-t border-[#b7cbd2]">
+          <AccordionTrigger className="font-display items-center gap-6 rounded-none py-6 text-left text-2xl font-medium leading-tight tracking-[-.01em] hover:no-underline md:py-7 md:text-[1.9rem]"><span className="flex gap-6"><span className="tabular mt-2 hidden font-sans text-[11px] font-semibold tracking-[.16em] text-[#b52337] sm:block">0{index + 1}</span>{item.question}</span></AccordionTrigger>
+          <AccordionContent className="max-w-2xl pb-8 text-base leading-[1.7] text-[#526a78] sm:pl-[2.9rem]">{item.answer}</AccordionContent>
         </AccordionItem>)}
       </Accordion>
     </div>

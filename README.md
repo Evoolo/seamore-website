@@ -35,6 +35,16 @@ The generated site is in `out/`.
 
 The hero, feature, blog, FAQ, and call-to-action sections began as Shadcnblocks registry blocks and were adapted to the Sea More identity. Shared shadcn/ui primitives are in `components/ui/`; site-specific components are in `components/`.
 
+### Motion
+
+All animation is CSS in `app/globals.css`, driven by one small client component, `components/motion.tsx` (one IntersectionObserver and one scroll listener for the whole site):
+
+- `data-reveal="up | clip | words | stagger"` on any element animates it in once when it enters the viewport. `words` needs the heading text wrapped with `<Words text="…" />` from `components/words.tsx`.
+- `data-scrub` sharpens a heading word by word as it scrolls through the screen (home page statement).
+- `data-parallax` on a `.parallax` wrapper drifts an image inside its frame.
+- Heroes use the `hero-enter` class and play once on load without JavaScript.
+- Content is hidden for a reveal only when JavaScript is running, and everything rests under `prefers-reduced-motion`.
+
 The Shadcnblocks registry token is read from `SHADCNBLOCKS_API_KEY` in `.env.local` when adding new blocks. This is only needed for registry access, not for running the website. Copy `.env.example` if you need to set it up in another environment.
 
 ## Content editor

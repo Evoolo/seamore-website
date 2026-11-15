@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ButtonLink } from "@/components/arrow";
+import { Words } from "@/components/words";
 
 export default function NotFound() {
-  return <main className="flex min-h-[65svh] items-center bg-[#071d34] px-6 py-20 text-white"><div className="mx-auto w-full max-w-[1440px]"><p className="eyebrow mb-7 text-[#ff5a61]">404 / Off the map</p><h1 className="font-display max-w-3xl text-[clamp(5rem,9vw,10rem)] leading-[.85] tracking-[-.06em]">A different direction.</h1><p className="mt-8 max-w-md text-lg leading-relaxed text-white/70">We couldn&apos;t find that page. There is still plenty to explore.</p><Link href="/" className="mt-10 inline-flex items-center gap-2 border-b border-white pb-2 text-xs font-semibold uppercase tracking-[.16em]"><ArrowLeft className="size-4" /> Back to Sea More</Link></div></main>;
+  return <main id="main" className="hero-enter flex min-h-[72svh] items-center bg-[#071d34] py-24 text-white"><div className="shell"><p className="eyebrow eyebrow-rule hero-fade mb-8 text-[#ff5a61]" style={{ "--i": -3 } as React.CSSProperties}>404 / Off the map</p><h1 className="h-xl max-w-4xl"><Words text="A different direction." /></h1><p className="lede hero-fade mt-9 max-w-md text-white/70" style={{ "--i": 1 } as React.CSSProperties}>We couldn&apos;t find that page. There is still plenty to explore.</p><div className="hero-fade mt-10" style={{ "--i": 2 } as React.CSSProperties}><ButtonLink href="/" variant="light">Back to Sea More</ButtonLink></div></div></main>;
 }
