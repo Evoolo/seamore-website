@@ -3,7 +3,7 @@ order: 1
 category: "Our approach"
 title: "Follow the wildlife, not the map"
 excerpt: "Why an encounter begins long before you enter the water."
-image: "/media/whale-shark-detail.jpg"
+image: "/seamore/media/whale-shark-detail.jpg"
 alt: "Whale shark photographed below the water's surface"
 readTime: "4 min read"
 ---

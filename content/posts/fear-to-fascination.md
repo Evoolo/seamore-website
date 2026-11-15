@@ -3,7 +3,7 @@ order: 3
 category: "Our story"
 title: "From fear to fascination"
 excerpt: "The small reef shark that changed the way Sea More sees the ocean."
-image: "/media/great-white.jpg"
+image: "/seamore/media/great-white.jpg"
 alt: "Shark gliding through open water"
 readTime: "4 min read"
 ---

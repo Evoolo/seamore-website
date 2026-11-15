@@ -3,7 +3,7 @@
   "title": "Orcas under winter skies",
   "animal": "Orcas & fin whales",
   "place": "Andenes, Norway",
-  "image": "/media/orcas.jpg",
+  "image": "/seamore/media/orcas.jpg",
   "alt": "Orcas surfacing against a northern mountain landscape",
   "intro": "Follow the rhythm of the northern sea, from orca encounters to the aurora.",
   "description": "Sea More's Norwegian expedition concept brings together snorkeling focused on orcas and fin whales with the possibility of northern lights. Winter conditions shape each day, making the experience as much about the place as the animals.",
@@ -14,11 +14,11 @@
   ],
   "gallery": [
     {
-      "src": "/media/orcas.jpg",
+      "src": "/seamore/media/orcas.jpg",
       "alt": "Orcas swimming at the surface"
     },
     {
-      "src": "/media/northern-lights.jpg",
+      "src": "/seamore/media/northern-lights.jpg",
       "alt": "Northern lights over Norway"
     }
   ]

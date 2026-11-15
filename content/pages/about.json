@@ -3,7 +3,7 @@
     "eyebrow": "The story behind Sea More",
     "title": "Look closer.",
     "description": "The more we understand the natural world, the more extraordinary it becomes.",
-    "image": "/media/manta-rays.jpg",
+    "image": "/seamore/media/manta-rays.jpg",
     "imageAlt": "Rays and a diver in open blue water"
   },
   "origin": {
@@ -19,14 +19,14 @@
     "eyebrow": "How we travel",
     "heading": "The right place. The right people.",
     "body": "We focus on locations chosen for the wildlife encounter, and work with experienced professionals to help guests make the most of every journey. The wild remains wild; that is part of its wonder.",
-    "image": "/media/whale-shark.jpg",
+    "image": "/seamore/media/whale-shark.jpg",
     "imageAlt": "Whale shark and diver beneath the surface"
   },
   "leader": {
     "eyebrow": "Meet the expedition leader",
     "name": "Daniel Flormann.",
     "body": "The original site introduces Daniel as a biophysicist, diving instructor and expedition leader with a focus on biology, underwater photography, sharks and crocodiles. Sea More's wider network brings local expertise into each journey.",
-    "image": "/media/daniel.jpg",
+    "image": "/seamore/media/daniel.jpg",
     "imageAlt": "Daniel Flormann, Sea More expedition leader"
   },
   "values": {

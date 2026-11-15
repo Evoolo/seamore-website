@@ -3,7 +3,7 @@ order: 2
 category: "Field notes"
 title: "The space between encounters"
 excerpt: "An orca expedition is also a story about winter light, patience and place."
-image: "/media/orcas.jpg"
+image: "/seamore/media/orcas.jpg"
 alt: "Orcas in a northern seascape"
 readTime: "3 min read"
 ---

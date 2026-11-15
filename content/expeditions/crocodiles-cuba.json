@@ -3,7 +3,7 @@
   "title": "At the water's edge",
   "animal": "American crocodiles",
   "place": "Jardines de la Reina, Cuba",
-  "image": "/media/crocodile.jpg",
+  "image": "/seamore/media/crocodile.jpg",
   "alt": "Travelers in shallow water observing crocodiles",
   "intro": "A rare perspective on crocodiles in their own environment.",
   "description": "Sea More's archived Cuba expedition combined snorkeling near American crocodiles with diving in the surrounding marine reserve. It reflects the brand's belief that informed, carefully guided experience can turn fear into respect.",
@@ -14,11 +14,11 @@
   ],
   "gallery": [
     {
-      "src": "/media/crocodile.jpg",
+      "src": "/seamore/media/crocodile.jpg",
       "alt": "Guests observing crocodiles in shallow water"
     },
     {
-      "src": "/media/blue-shark.jpg",
+      "src": "/seamore/media/blue-shark.jpg",
       "alt": "Shark photographed underwater"
     }
   ]
