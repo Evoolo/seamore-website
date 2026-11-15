@@ -41,13 +41,8 @@ The Shadcnblocks registry token is read from `SHADCNBLOCKS_API_KEY` in `.env.loc
 
 Decap CMS is served at <https://evoolo.github.io/seamore/admin/>. It edits `content/` in the source repository and uploads photos to `public/media/`. The editor offers website page sections, expeditions, journeys, articles, and FAQs. New expedition and journey entries receive their own page and appear in their respective overview after the GitHub Pages build finishes. A new expedition can also be featured on the home page by adding its URL name under **Website pages → Home page → Selected expeditions**.
 
-Authentication uses the Sea More GitHub App and the small Cloudflare Worker in `cloudflare/cms-auth/`. The published `Evoolo/seamore` repository needs no editor access. The admin URL shows a setup message until the App credentials are stored in Cloudflare.
+Authentication uses the [Sea More GitHub App](https://github.com/apps/sea-more-expeditions-cms) and the Cloudflare Worker in `cloudflare/cms-auth/`. The App is installed on **only** `Evoolo/seamore-website`; the published `Evoolo/seamore` repository needs no editor access. Its client ID and secret are stored as Cloudflare Worker secrets.
 
-To connect the App:
+To give a customer access, invite their GitHub account to `Evoolo/seamore-website` with **Write** permission. They can then open the admin URL, sign in with GitHub, edit an entry, and publish. The App's user token can edit only repositories available to both the App installation and that GitHub user. A source commit triggers the static GitHub Pages build.
 
-1. Open <https://seamore-decap-auth.fux-media.workers.dev/register> while signed in to GitHub as the repository owner. Approve the GitHub App registration, then give the one-time code displayed by the Worker to the maintainer within one hour.
-2. The maintainer exchanges the code through GitHub's App manifest conversion API and stores the returned client ID and secret as Cloudflare Worker secrets. The private key is not needed for this user OAuth flow.
-3. Install the new App on **only** `Evoolo/seamore-website`. Give each customer editor GitHub write access to that source repository. The App's user token can edit only repositories available to both the App installation and that GitHub user.
-4. Open the admin URL, sign in with GitHub, edit an entry, and publish. The source commit triggers the static GitHub Pages build.
-
-The Worker is tied to this site's origin and only requests repository Contents read/write access. Do not commit the App client secret or private key.
+The Worker accepts login requests only for this site's origin and the App has repository Contents read/write permission. Do not commit the App client secret or private key.
