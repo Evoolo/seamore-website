@@ -1,0 +1,32 @@
+name: Trigger published website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out published repository with its deploy key
+        uses: actions/checkout@v4
+        with:
+          repository: Evoolo/seamore
+          ref: main
+          path: published
+          ssh-key: ${{ secrets.PUBLISH_DEPLOY_KEY }}
+
+      - name: Request a new render
+        run: |
+          printf '%s\n' "$GITHUB_SHA" > published/.pending-source-commit
+          git -C published config user.name "github-actions[bot]"
+          git -C published config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C published add .pending-source-commit
+          if ! git -C published diff --cached --quiet; then
+            git -C published commit -m "Request render for ${GITHUB_SHA:0:7}"
+            git -C published push origin HEAD:main
+          fi

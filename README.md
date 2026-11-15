@@ -13,7 +13,7 @@ Open <http://localhost:3000>. For a production check, run `npm run typecheck` an
 
 ## Publishing
 
-This repository is the website source: [Evoolo/seamore-website](https://github.com/Evoolo/seamore-website). The separate [Evoolo/seamore](https://github.com/Evoolo/seamore) repository builds this source with GitHub Actions, commits the static files, and deploys them to GitHub Pages at <https://evoolo.github.io/seamore/>. Its workflow can be run manually and checks for source updates hourly.
+This repository is the website source: [Evoolo/seamore-website](https://github.com/Evoolo/seamore-website). The separate [Evoolo/seamore](https://github.com/Evoolo/seamore) repository builds this source with GitHub Actions, commits the static files, and deploys them to GitHub Pages at <https://evoolo.github.io/seamore/>. Source commits trigger its workflow automatically; it can also be run manually and checks for updates daily as a fallback.
 
 To test the GitHub Pages export locally:
 
