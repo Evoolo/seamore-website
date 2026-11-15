@@ -1,0 +1,287 @@
+# Complete the Decap Turbo onboarding, then replace this UUID with the site's Site ID.
+backend:
+  name: turbo-github
+  turbo_site_id: 00000000-0000-0000-0000-000000000000
+  branch: main
+
+site_url: https://evoolo.github.io/seamore/
+display_url: https://evoolo.github.io/seamore/
+logo_url: /seamore/media/logo.png
+media_folder: public/media
+public_folder: /seamore/media
+editor:
+  preview: false
+
+collections:
+  - name: posts
+    label: Journal articles
+    label_singular: Article
+    folder: content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}} · {{category}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Category, name: category, widget: string, default: Field notes }
+      - { label: Summary, name: excerpt, widget: text, hint: Shown on article cards and in search previews. }
+      - { label: Cover image, name: image, widget: image }
+      - { label: Image description, name: alt, widget: string, hint: Describe the photo for accessibility. }
+      - { label: Reading time, name: readTime, widget: string, default: "4 min read" }
+      - { label: Display order, name: order, widget: number, value_type: int, default: 100, hint: Lower numbers appear first. }
+      - { label: Article, name: body, widget: markdown }
+
+  - name: expeditions
+    label: Expeditions
+    label_singular: Expedition
+    folder: content/expeditions
+    create: false
+    delete: false
+    extension: json
+    format: json
+    summary: "{{title}} · {{place}}"
+    fields:
+      - { label: Display number, name: number, widget: string, hint: Use 01, 02, and so on. }
+      - { label: Title, name: title, widget: string }
+      - { label: Wildlife, name: animal, widget: string }
+      - { label: Destination, name: place, widget: string }
+      - { label: Main image, name: image, widget: image }
+      - { label: Main image description, name: alt, widget: string }
+      - { label: Short introduction, name: intro, widget: text }
+      - { label: Full description, name: description, widget: text }
+      - label: Highlights
+        name: details
+        widget: list
+        field: { label: Highlight, name: highlight, widget: string }
+      - label: Gallery
+        name: gallery
+        widget: list
+        fields:
+          - { label: Image, name: src, widget: image }
+          - { label: Image description, name: alt, widget: string }
+
+  - name: pages
+    label: Website pages
+    files:
+      - label: Home page
+        name: home
+        file: content/pages/home.json
+        format: json
+        fields:
+          - label: Main hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: First headline line, name: titleFirst, widget: string }
+              - { label: Emphasized headline word, name: titleEmphasis, widget: string }
+              - { label: Last headline word, name: titleLast, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+              - { label: Side note title, name: asideTitle, widget: string }
+              - { label: Side note, name: asideText, widget: text }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Emphasized heading, name: emphasis, widget: string }
+              - { label: Body, name: body, widget: text }
+          - label: Selected expeditions
+            name: selected
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading line 1, name: headingLine1, widget: string }
+              - { label: Heading line 2, name: headingLine2, widget: string }
+              - label: Featured expeditions
+                name: slugs
+                widget: select
+                multiple: true
+                options:
+                  - { label: Whale sharks in Mexico, value: whale-sharks-mexico }
+                  - { label: Orcas and northern lights, value: orcas-northern-lights }
+                  - { label: Sharks in South Africa, value: sharks-south-africa }
+                  - { label: Crocodiles in Cuba, value: crocodiles-cuba }
+                  - { label: Azores blue water, value: azores-blue-water }
+          - label: Brand story
+            name: story
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Travel styles
+            name: travel
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading line 1, name: headingLine1, widget: string }
+              - { label: Heading line 2, name: headingLine2, widget: string }
+              - { label: Body, name: body, widget: text }
+              - label: Travel formats
+                name: formats
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: body, widget: text }
+
+      - label: About page
+        name: about
+        file: content/pages/about.json
+        format: json
+        fields:
+          - label: Main hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Origin story
+            name: origin
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Emphasized heading, name: emphasis, widget: string }
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                field: { label: Paragraph, name: paragraph, widget: text }
+          - label: Travel approach
+            name: approach
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Expedition leader
+            name: leader
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Biography, name: body, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Values
+            name: values
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - label: Principles
+                name: items
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: body, widget: text }
+
+      - label: Contact page
+        name: contact
+        file: content/pages/contact.json
+        format: json
+        fields:
+          - label: Main hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Contact details
+            name: contact
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Email address, name: email, widget: string }
+          - label: Enquiry prompts
+            name: prompts
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - label: Questions
+                name: items
+                widget: list
+                fields:
+                  - { label: Question, name: title, widget: string }
+                  - { label: Guidance, name: body, widget: text }
+              - { label: Closing note, name: note, widget: text }
+
+      - label: Expeditions landing page
+        name: expeditions_page
+        file: content/pages/expeditions.json
+        format: json
+        fields:
+          - label: Main hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+
+      - label: Journal landing page
+        name: journal_page
+        file: content/pages/journal.json
+        format: json
+        fields:
+          - label: Main hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+
+      - label: Closing invitation
+        name: cta
+        file: content/pages/cta.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading line 1, name: headingLine1, widget: string }
+          - { label: Emphasized heading, name: headingEmphasis, widget: string }
+          - { label: Heading line 2, name: headingLine2, widget: string }
+          - { label: Body, name: body, widget: text }
+          - { label: Photo, name: image, widget: image }
+          - { label: Photo description, name: imageAlt, widget: string }
+
+      - label: Frequently asked questions
+        name: faq
+        file: content/pages/faq.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading line 1, name: headingLine1, widget: string }
+          - { label: Heading line 2, name: headingLine2, widget: string }
+          - label: Questions
+            name: items
+            widget: list
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: text }

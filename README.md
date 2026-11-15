@@ -36,3 +36,16 @@ The generated site is in `out/`.
 The hero, feature, blog, FAQ, and call-to-action sections began as Shadcnblocks registry blocks and were adapted to the Sea More identity. Shared shadcn/ui primitives are in `components/ui/`; site-specific components are in `components/`.
 
 The Shadcnblocks registry token is read from `SHADCNBLOCKS_API_KEY` in `.env.local` when adding new blocks. This is only needed for registry access, not for running the website. Copy `.env.example` if you need to set it up in another environment.
+
+## Content editor
+
+Decap CMS is served at <https://evoolo.github.io/seamore/admin/>. It edits the files in `content/` and uploads photos to `public/media/`. The editor uses Decap Turbo's GitHub App for authentication; the published `seamore` repository does not need editor access.
+
+To finish the account connection, create a Decap Turbo site and install its GitHub App for **only** `Evoolo/seamore-website`. Use these site settings:
+
+- Repository: `Evoolo/seamore-website`
+- Branch: `main`
+- Config path: `public/admin/config.yml`
+- Admin URL: `https://evoolo.github.io/seamore/admin/`
+
+Replace the placeholder `backend.turbo_site_id` in `public/admin/config.yml` with the Site ID from Turbo. Until then, the admin page shows a setup message. Invite the customer from Turbo once the site is connected.
