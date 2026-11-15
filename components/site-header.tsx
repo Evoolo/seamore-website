@@ -8,6 +8,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const links = [
   { href: "/expeditions", label: "Expeditions" },
+  { href: "/journeys", label: "Journeys" },
   { href: "/about", label: "Our story" },
   { href: "/blog", label: "Journal" },
 ];

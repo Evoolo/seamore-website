@@ -15,15 +15,15 @@
   <body>
     <main id="setup"><h1>Content editor setup in progress.</h1><p>The Sea More editor will be available here after the GitHub App connection is complete.</p></main>
     <script>
-      fetch("config.yml", { cache: "no-store" })
-        .then((response) => response.text())
-        .then((config) => {
-          if (config.includes("00000000-0000-0000-0000-000000000000")) return;
+      fetch("https://seamore-decap-auth.fux-media.workers.dev/health", { cache: "no-store" })
+        .then((response) => response.json())
+        .then((health) => {
+          if (!health.configured) return;
           document.getElementById("setup").remove();
           const script = document.createElement("script");
           script.src = "https://cdn.jsdelivr.net/npm/decap-cms@^3.17.0/dist/decap-cms.js";
           document.body.appendChild(script);
-        });
+        }).catch(() => {});
     </script>
   </body>
 </html>

@@ -48,6 +48,7 @@ export default function Home() {
             return <Reveal key={item.title} className="border-b border-[#8db1c1] py-9 lg:border-r lg:px-8 first:lg:pl-0 last:lg:border-r-0"><div className="flex items-center justify-between"><Icon className="size-7 stroke-[1.4] text-[#0c4d78]" /><span className="eyebrow text-[#0c4d78]">0{index + 1} / 0{content.travel.formats.length}</span></div><h3 className="font-display mt-12 text-4xl leading-tight">{item.title}</h3><p className="mt-4 max-w-sm text-sm leading-[1.7] text-[#526a78]">{item.body}</p></Reveal>;
           })}
         </div>
+        <Link href="/journeys" className="mt-10 inline-flex items-center gap-2 border-b-2 border-[#b52337] pb-2 text-xs font-semibold uppercase tracking-[.16em]">Explore journeys <ArrowUpRight className="size-4" /></Link>
       </div>
     </section>
     <Blog1 posts={posts} compact />

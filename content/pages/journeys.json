@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "eyebrow": "Travel your way",
+    "title": "Make it yours.",
+    "description": "Different routes and formats, always led by curiosity about the wild.",
+    "image": "/media/manta-rays.jpg",
+    "imageAlt": "Rays and a diver in open blue water"
+  },
+  "intro": {
+    "heading": "One wild world. Your way in.",
+    "body": "Explore ideas for custom and private journeys. Each is a starting point; the details are shaped together with Sea More."
+  }
+}

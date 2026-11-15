@@ -1,8 +1,9 @@
-# Complete the Decap Turbo onboarding, then replace this UUID with the site's Site ID.
 backend:
-  name: turbo-github
-  turbo_site_id: 00000000-0000-0000-0000-000000000000
+  name: github
+  repo: Evoolo/seamore-website
   branch: main
+  base_url: https://seamore-decap-auth.fux-media.workers.dev
+  auth_endpoint: auth
 
 site_url: https://evoolo.github.io/seamore/
 display_url: https://evoolo.github.io/seamore/
@@ -36,10 +37,12 @@ collections:
     label: Expeditions
     label_singular: Expedition
     folder: content/expeditions
-    create: false
+    create: true
     delete: false
     extension: json
     format: json
+    slug: "{{slug}}"
+    identifier_field: title
     summary: "{{title}} · {{place}}"
     fields:
       - { label: Display number, name: number, widget: string, hint: Use 01, 02, and so on. }
@@ -60,6 +63,30 @@ collections:
         fields:
           - { label: Image, name: src, widget: image }
           - { label: Image description, name: alt, widget: string }
+
+  - name: journeys
+    label: Journeys
+    label_singular: Journey
+    folder: content/journeys
+    create: true
+    delete: false
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} · {{place}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Travel format, name: type, widget: select, options: ["Group journey", "Custom journey", "Exclusive travel"] }
+      - { label: Destination, name: place, widget: string }
+      - { label: Main image, name: image, widget: image }
+      - { label: Main image description, name: alt, widget: string }
+      - { label: Short introduction, name: intro, widget: text }
+      - { label: Full description, name: description, widget: text }
+      - label: Highlights
+        name: highlights
+        widget: list
+        field: { label: Highlight, name: highlight, widget: string }
 
   - name: pages
     label: Website pages
@@ -99,14 +126,9 @@ collections:
               - { label: Heading line 2, name: headingLine2, widget: string }
               - label: Featured expeditions
                 name: slugs
-                widget: select
-                multiple: true
-                options:
-                  - { label: Whale sharks in Mexico, value: whale-sharks-mexico }
-                  - { label: Orcas and northern lights, value: orcas-northern-lights }
-                  - { label: Sharks in South Africa, value: sharks-south-africa }
-                  - { label: Crocodiles in Cuba, value: crocodiles-cuba }
-                  - { label: Azores blue water, value: azores-blue-water }
+                widget: list
+                hint: Enter an expedition URL name, for example whale-sharks-mexico. New expeditions can be featured here too.
+                field: { label: Expedition URL name, name: slug, widget: string }
           - label: Brand story
             name: story
             widget: object
@@ -225,6 +247,27 @@ collections:
       - label: Expeditions landing page
         name: expeditions_page
         file: content/pages/expeditions.json
+        format: json
+        fields:
+          - label: Main hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Photo, name: image, widget: image }
+              - { label: Photo description, name: imageAlt, widget: string }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Body, name: body, widget: text }
+
+      - label: Journeys landing page
+        name: journeys_page
+        file: content/pages/journeys.json
         format: json
         fields:
           - label: Main hero
