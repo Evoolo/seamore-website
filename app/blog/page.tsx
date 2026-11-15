@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Blog1 } from "@/components/blog1";
 import { Cta1 } from "@/components/cta1";
-import { posts } from "@/lib/content";
+import { posts, readPage } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Journal", description: "Field notes, stories and ideas from the world of Sea More Expeditions." };
 
 export default function BlogPage() {
-  return <main><PageHero eyebrow="The Sea More journal" title="Stories from the wild." description="A place for the questions, places and encounters that stay with us." image="/media/blue-shark.jpg" alt="Shark in sunlit blue water" compact /><Blog1 posts={posts} /><Cta1 /></main>;
+  const { hero } = readPage<{ hero: { eyebrow: string; title: string; description: string; image: string; imageAlt: string } }>("journal");
+  return <main><PageHero eyebrow={hero.eyebrow} title={hero.title} description={hero.description} image={hero.image} alt={hero.imageAlt} compact /><Blog1 posts={posts} /><Cta1 /></main>;
 }

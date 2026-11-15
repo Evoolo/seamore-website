@@ -1,0 +1,25 @@
+{
+  "number": "05",
+  "title": "Blue water, wild encounters",
+  "animal": "Sharks, rays & dolphins",
+  "place": "Pico, Azores",
+  "image": "/media/manta-rays.jpg",
+  "alt": "Mobula rays and a diver in the blue water of the Azores",
+  "intro": "An open-ocean journey shaped by the life moving through the Azores.",
+  "description": "The archived Azores itinerary centered on mako and blue sharks, mobula rays, and dolphins around Pico. The experience asks for a willingness to follow the day's conditions and remain curious about what appears.",
+  "details": [
+    "Blue-water diving",
+    "Pico island",
+    "Multiple marine species"
+  ],
+  "gallery": [
+    {
+      "src": "/media/manta-rays.jpg",
+      "alt": "Mobula rays swimming near a diver"
+    },
+    {
+      "src": "/media/blue-shark.jpg",
+      "alt": "Blue shark below the surface"
+    }
+  ]
+}

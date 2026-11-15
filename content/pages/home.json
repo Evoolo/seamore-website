@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "eyebrow": "Wildlife-led expeditions",
+    "titleFirst": "See more.",
+    "titleEmphasis": "Understand",
+    "titleLast": "more.",
+    "description": "Go where the wildlife is. Travel with people who know the water, and return with a new way of seeing it.",
+    "image": "/media/hero-whale-shark.jpg",
+    "imageAlt": "Whale shark moving through clear blue water",
+    "asideTitle": "01 / The encounter",
+    "asideText": "Wild places cannot be scheduled. A considered journey gives you the best chance to meet them on their own terms."
+  },
+  "intro": {
+    "eyebrow": "Our point of view",
+    "heading": "The destination is only the beginning.",
+    "emphasis": "The encounter changes everything.",
+    "body": "We choose places for the wildlife you hope to meet, then shape an expedition around curiosity, experienced guidance and the freedom to be surprised."
+  },
+  "selected": {
+    "eyebrow": "Selected expeditions",
+    "headingLine1": "Go where",
+    "headingLine2": "they are.",
+    "slugs": ["whale-sharks-mexico", "orcas-northern-lights", "sharks-south-africa", "azores-blue-water"]
+  },
+  "story": {
+    "eyebrow": "The idea behind Sea More",
+    "heading": "Fear gave way to fascination.",
+    "body": "One small reef shark changed a young diver's perspective. More time in the water brought more questions, more respect and a simple ambition: help others meet wildlife with open eyes.",
+    "image": "/media/great-white.jpg",
+    "imageAlt": "Shark moving through open water"
+  },
+  "travel": {
+    "eyebrow": "The journey, your way",
+    "headingLine1": "One wild world.",
+    "headingLine2": "Many ways in.",
+    "body": "Come with a group of like-minded travelers, ask us to build your own route, or make the expedition entirely private.",
+    "formats": [
+      { "title": "Group expeditions", "body": "Experienced guidance, shared discoveries and space to learn from the people beside you." },
+      { "title": "Custom journeys", "body": "Your interests lead. We shape the places, pace and additions around the trip you imagine." },
+      { "title": "Exclusive travel", "body": "A privately arranged experience with the people and level of support you choose." }
+    ]
+  }
+}

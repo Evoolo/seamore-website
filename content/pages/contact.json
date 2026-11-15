@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "eyebrow": "Start with a question",
+    "title": "Let's explore.",
+    "description": "Tell us what you hope to see. We can take the first step from there.",
+    "image": "/media/northern-lights.jpg",
+    "imageAlt": "Northern lights above a winter landscape"
+  },
+  "contact": {
+    "eyebrow": "Contact Sea More",
+    "heading": "A journey begins with a conversation.",
+    "body": "Share the animal, destination or experience on your mind. Let us know whether you are interested in a group expedition, a custom journey or private travel.",
+    "email": "info@seamoreexpeditions.com"
+  },
+  "prompts": {
+    "eyebrow": "A helpful starting point",
+    "items": [
+      { "title": "What draws you in?", "body": "A species, a place, a photograph or a question." },
+      { "title": "How do you want to travel?", "body": "With a group, on a custom route or privately." },
+      { "title": "What matters to you?", "body": "Diving, snorkeling, photography, timing and any specific needs." }
+    ],
+    "note": "Current departures, prices and availability are confirmed by Sea More directly."
+  }
+}

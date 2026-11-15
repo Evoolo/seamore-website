@@ -25,10 +25,11 @@ The generated site is in `out/`.
 
 ## Content and assets
 
-- `lib/content.ts` holds expedition themes, journal articles, and FAQs.
+- `content/` holds page copy, expedition themes, journal articles, and FAQs. `lib/content.ts` loads these files for the static build.
 - `public/media/` holds selected images copied from the supplied `assets/images/` collection and the refreshed logo. The larger original image archive remains in the local workspace; the website repository contains only the images it uses.
 - `CONTENT.md`, `BRAND_GUIDE.md`, and `CORPORATE_IDENTITY.md` remain the source reference documents.
 - The pages deliberately avoid publishing old expedition dates, prices, or guaranteed sightings. Availability is handled by enquiry.
+- The contact form opens an email draft in the visitor's email app with all entered fields. The visitor reviews and sends that draft from their email app.
 
 ## UI
 

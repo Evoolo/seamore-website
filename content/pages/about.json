@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "eyebrow": "The story behind Sea More",
+    "title": "Look closer.",
+    "description": "The more we understand the natural world, the more extraordinary it becomes.",
+    "image": "/media/manta-rays.jpg",
+    "imageAlt": "Rays and a diver in open blue water"
+  },
+  "origin": {
+    "eyebrow": "Where it began",
+    "heading": "A small shark.",
+    "emphasis": "A much bigger question.",
+    "paragraphs": [
+      "Sea More's story begins with a young diver who was wary of sharks. During a first dive course, a small reef shark appeared near the coral. Curiosity replaced fear, and the animal swam away.",
+      "That moment started a search to understand these creatures through experience. Sea More was created to offer others the same chance to observe, learn and return with deeper respect."
+    ]
+  },
+  "approach": {
+    "eyebrow": "How we travel",
+    "heading": "The right place. The right people.",
+    "body": "We focus on locations chosen for the wildlife encounter, and work with experienced professionals to help guests make the most of every journey. The wild remains wild; that is part of its wonder.",
+    "image": "/media/whale-shark.jpg",
+    "imageAlt": "Whale shark and diver beneath the surface"
+  },
+  "leader": {
+    "eyebrow": "Meet the expedition leader",
+    "name": "Daniel Flormann.",
+    "body": "The original site introduces Daniel as a biophysicist, diving instructor and expedition leader with a focus on biology, underwater photography, sharks and crocodiles. Sea More's wider network brings local expertise into each journey.",
+    "image": "/media/daniel.jpg",
+    "imageAlt": "Daniel Flormann, Sea More expedition leader"
+  },
+  "values": {
+    "eyebrow": "What guides us",
+    "heading": "Curiosity. Experience. Respect.",
+    "items": [
+      { "title": "Stay curious", "body": "The best encounter opens a new question, rather than ending a story." },
+      { "title": "Know the place", "body": "Thoughtful choices and experienced partners shape the journey." },
+      { "title": "Keep it personal", "body": "A good expedition leaves room for each traveler's interests and pace." }
+    ]
+  }
+}

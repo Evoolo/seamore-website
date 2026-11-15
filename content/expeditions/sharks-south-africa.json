@@ -1,0 +1,25 @@
+{
+  "number": "03",
+  "title": "The shark coast",
+  "animal": "Tiger sharks & more",
+  "place": "South Africa",
+  "image": "/media/tiger-shark.jpg",
+  "alt": "Tiger shark swimming near divers in blue water",
+  "intro": "Enter the water where encounters with several shark species are possible.",
+  "description": "The archived expedition explored Protea Banks and Aliwal Shoal with a focus on tiger, bull, and blacktip sharks. This is diving with experienced local professionals, with the ocean setting the terms of every encounter.",
+  "details": [
+    "Protea Banks",
+    "Aliwal Shoal",
+    "Experienced dive partners"
+  ],
+  "gallery": [
+    {
+      "src": "/media/tiger-shark.jpg",
+      "alt": "Tiger shark with divers"
+    },
+    {
+      "src": "/media/great-white.jpg",
+      "alt": "Shark photographed underwater"
+    }
+  ]
+}

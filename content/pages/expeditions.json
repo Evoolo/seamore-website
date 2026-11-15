@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "eyebrow": "Explore the extraordinary",
+    "title": "Follow the wild.",
+    "description": "Journeys planned around the animals, with the ocean always free to surprise us.",
+    "image": "/media/tiger-shark.jpg",
+    "imageAlt": "Tiger shark moving through blue water"
+  },
+  "intro": {
+    "heading": "The encounters worth traveling for.",
+    "body": "Each theme draws on Sea More's original expeditions. It is a starting point for a conversation, not a current schedule or a promise of a sighting."
+  }
+}

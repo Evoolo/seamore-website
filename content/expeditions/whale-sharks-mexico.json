@@ -1,0 +1,25 @@
+{
+  "number": "01",
+  "title": "Whale sharks in blue water",
+  "animal": "Whale sharks",
+  "place": "Yucatán, Mexico",
+  "image": "/media/whale-shark.jpg",
+  "alt": "Whale shark swimming above a diver in clear blue water",
+  "intro": "Meet the largest fish in the ocean in the clear waters off Mexico.",
+  "description": "A journey shaped around whale shark encounters, with room to discover the wider marine world of the Yucatán. The original Sea More itinerary paired snorkeling with diving around Cozumel and the cenotes.",
+  "details": [
+    "Wildlife-led snorkeling",
+    "Cozumel and cenotes",
+    "Group or tailored travel"
+  ],
+  "gallery": [
+    {
+      "src": "/media/whale-shark-detail.jpg",
+      "alt": "Whale shark close to the surface"
+    },
+    {
+      "src": "/media/whale-shark.jpg",
+      "alt": "Whale shark and diver underwater"
+    }
+  ]
+}
