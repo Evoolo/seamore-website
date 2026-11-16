@@ -2,8 +2,10 @@ backend:
   name: github
   repo: Evoolo/seamore-website
   branch: main
-  base_url: https://seamore-decap-auth.fux-media.workers.dev
+  # Central login for all Tacheles sites (~/code/tacheles-auth)
+  base_url: https://cms.tacheles.workers.dev
   auth_endpoint: auth
+  site_domain: seamore
 
 site_url: https://evoolo.github.io/seamore/
 display_url: https://evoolo.github.io/seamore/
